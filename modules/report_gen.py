@@ -1,3 +1,4 @@
+from modules.database import insert_scan
 import html
 import json
 import os
@@ -289,7 +290,10 @@ def save_reports(target_label, username_data=None, domain_data=None, output_dir=
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(_build_html_report(payload))
 
+    paths = {"json": json_path, "txt": txt_path, "html": html_path}
+    scan_id = insert_scan(payload, paths)
     return {
+        "scan_id": scan_id,
         "json": json_path,
         "txt": txt_path,
         "html": html_path,

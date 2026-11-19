@@ -14,6 +14,7 @@ import sys
 from colorama import Fore, Style, init
 
 from modules.domain_recon import normalize_domain, run_domain_recon
+from modules.database import get_recent_scans
 from modules.report_gen import save_reports
 from modules.username_recon import run_username_recon
 
@@ -143,7 +144,7 @@ def execute_scan(username=None, domain=None, auto_pivot=True, output_dir="report
     )
     for note in exp["observations"]:
         print(Fore.WHITE + f"    - {note}")
-    print(Fore.GREEN + "\n[+] Aggregated Reports Saved Successfully:")
+    print(Fore.GREEN + f"\n[+] Saved to SQLite Database (Scan ID #{saved.get('scan_id')}) & Report Files:")
     print(Fore.WHITE + f"    JSON : {saved['json']}")
     print(Fore.WHITE + f"    TXT  : {saved['txt']}")
     print(Fore.WHITE + f"    HTML : {saved['html']}")
@@ -151,6 +152,12 @@ def execute_scan(username=None, domain=None, auto_pivot=True, output_dir="report
 
 
 def list_reports(output_dir="reports"):
+    scans = get_recent_scans(limit=10)
+    if scans:
+        print(Fore.CYAN + "\n[*] Recent Scans in SQLite Database (osint_recon.db):")
+        for s in scans:
+            print(Fore.WHITE + f"    [#{s['id']}] {s['created_utc']} | Target: {s['target_label']} | Found: {s['accounts_found']} | Exposure: {s['exposure_level']} ({s['exposure_score']}/100)")
+
     if not os.path.isdir(output_dir):
         print(Fore.YELLOW + "\n[!] No reports directory found yet. Run a scan first.\n")
         return

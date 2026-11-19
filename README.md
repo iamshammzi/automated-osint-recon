@@ -39,3 +39,7 @@ A lightweight, cross-platform Python command-line utility for passive Open Sourc
 - Username Recon: `python osint_tool.py -u torvalds`
 - Domain Recon: `python osint_tool.py -d kernel.org`
 - Combined Scan: `python osint_tool.py -u torvalds -d kernel.org`
+
+### Flask Local Web Interface & SQLite Database
+- Launch the local web dashboard: `python app.py`
+- Open `http://127.0.0.1:5000` in your browser to run scans and browse historical records stored in the local **SQLite database (`osint_recon.db`)**.

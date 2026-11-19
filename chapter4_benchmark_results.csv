@@ -1,0 +1,16 @@
+Test Category,Target,Checks,Detected/Status,Errors,Time_Sec
+Real Username,torvalds,18,11,0,2.41
+Real Username,gvanrossum,18,6,0,3.83
+Real Username,octocat,18,13,0,6.96
+Real Username,defunkt,18,13,0,4.26
+Real Username,mojombo,18,12,0,4.39
+Negative Control,osint_fake_user_991122,18,0,0,4.17
+Negative Control,zxq_nonexistent_884422,18,0,0,3.75
+Negative Control,null_handle_test_775533,18,0,0,4.65
+Negative Control,fake_recon_id_664411,18,0,0,3.82
+Negative Control,no_such_acct_553300,18,0,0,4.57
+Domain Recon,github.com,DNS/WHOIS/HTTP,WHOIS=True,0,13.31
+Domain Recon,kernel.org,DNS/WHOIS/HTTP,WHOIS=True,0,8.69
+Domain Recon,python.org,DNS/WHOIS/HTTP,WHOIS=True,0,11.84
+Domain Recon,wikipedia.org,DNS/WHOIS/HTTP,WHOIS=True,0,7.79
+Domain Recon,cloudflare.com,DNS/WHOIS/HTTP,WHOIS=True,0,6.77
