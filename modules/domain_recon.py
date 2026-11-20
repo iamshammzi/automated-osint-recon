@@ -16,7 +16,7 @@ def normalize_domain(raw_input):
         host = parsed.netloc
     else:
         host = raw_input.split("/")[0]
-    return host.lstrip("www.").split(":")[0]
+    return host.removeprefix("www.").split(":")[0]
 
 
 def _get_dns_resolver():

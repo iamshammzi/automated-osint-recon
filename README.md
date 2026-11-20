@@ -1,6 +1,6 @@
 # Automated OSINT Tool for Digital Footprint Aggregation and Social Media Reconnaissance
 
-A lightweight, cross-platform Python command-line utility for passive Open Source Intelligence (OSINT) collection, cross-platform username enumeration, public profile metadata extraction, and domain/infrastructure footprint analysis.
+A lightweight, cross-platform Python Open Source Intelligence (OSINT) tool featuring both a Command-Line Interface (CLI) and a local Flask Web UI with SQLite database storage for digital footprint aggregation, social media reconnaissance, public metadata extraction, and domain/infrastructure analysis.
 
 > **Ethical & Legal Notice:** This tool is developed strictly for academic research, cybersecurity education, and defensive self-auditing. It aggregates **only publicly accessible, unauthenticated data** and does not bypass logins, scrape private accounts, or perform intrusive scanning.
 
