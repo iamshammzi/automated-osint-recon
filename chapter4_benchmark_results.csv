@@ -12,5 +12,5 @@ Negative Control,no_such_acct_553300,18,0,0,4.57
 Domain Recon,github.com,DNS/WHOIS/HTTP,WHOIS=True,0,13.31
 Domain Recon,kernel.org,DNS/WHOIS/HTTP,WHOIS=True,0,8.69
 Domain Recon,python.org,DNS/WHOIS/HTTP,WHOIS=True,0,11.84
-Domain Recon,wikipedia.org,DNS/WHOIS/HTTP,WHOIS=True,0,7.79
+Domain Recon,wikipedia.org,DNS/WHOIS/HTTP,WHOIS=True,0,31.53
 Domain Recon,cloudflare.com,DNS/WHOIS/HTTP,WHOIS=True,0,6.77
